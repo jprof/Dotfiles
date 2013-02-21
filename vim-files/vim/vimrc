@@ -211,6 +211,6 @@ nmap <leader>j <ESC>:RopeGotoDefinition<cr>
 nmap <leader>l <ESC>:TagbarToggle<cr>
 imap <leader>l <ESC>:TagbarToggle<cr>i
 
-
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " =========== END Plugin Settings =========="
 "
