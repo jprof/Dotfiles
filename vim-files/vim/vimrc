@@ -24,7 +24,6 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
-set visualbell
 
 "set cursorline
 set ttyfast
@@ -77,22 +76,12 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-"set colorcolumn=79
+set colorcolumn=79
 
 " To  show special characters in Vim
 "set list
 set listchars=tab:▸\ ,eol:¬
 
-" Naviagations using keys up/down/left/right
-" Disabling default keys to learn the hjkl
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-"inoremap <up> <nop>
-"inoremap <down> <nop>
-"inoremap <left> <nop>
-"inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
@@ -166,6 +155,10 @@ nnoremap g; g;zz
 
 
 " =========== Gvim Settings =============
+syntax on
+set t_Co=16
+set background=dark
+colorschem solarized 
 
 " Removing scrollbars
 if has("gui_running")
@@ -175,14 +168,14 @@ if has("gui_running")
     set guioptions-=L
     set guioptions+=a
     set guioptions-=m
-    colo badwolf
     set listchars=tab:▸\ ,eol:¬         " Invisibles using the Textmate style
 endif
 
 " Special Settings for Consoles
 if !has("gui_running")
-    set t_Co=256
-    colorschem badwolf
+    set t_Co=16
+    set background=dark
+    colorschem solarized 
 endif
 
 " Source the vimrc file after saving it
